@@ -152,3 +152,13 @@ You can test the bonus by running `npm test test/bonus/02-isPrimary-spec.js`.
 
 You are now able to generate **Sequelize** models and migrations, as well as
 implement basic database-level constraints and model-level validations.
+
+## Submission
+
+Submit your work. Make sure to delete the `node_modules` folders in
+__BOTH root and server directories__!!
+
+1. Delete the `node_modules` folder in the root directory
+2. Delete the `node_modules` folder in the __server__ directory
+3. Zip up the project folder
+4. Submit the zip file
