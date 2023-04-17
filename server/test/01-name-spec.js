@@ -3,8 +3,8 @@ const chai = setupChai();
 const expect = chai.expect;
 
 describe('Colors Spec', async () => {
-    let DB_TEST_FILE, SERVER_DB_TEST_FILE, models, server;
-    before(async () => ({ server, models, DB_TEST_FILE, SERVER_DB_TEST_FILE } = await setupBefore(__filename)));
+    let DB_TEST_FILE, models, server;
+    before(async () => ({ server, models, DB_TEST_FILE } = await setupBefore(__filename)));
     after(async () => await removeTestDB(DB_TEST_FILE));
 
     describe('Color models has the correct constraints', async () => {
@@ -24,8 +24,8 @@ describe('Colors Spec', async () => {
         it('The colors are unique', async () => {
             await expect(models.Color.create({name: 'Red'})).to.be.fulfilled
             await expect(models.Color.create({name: 'Red'})).to.be.rejected
-            // const colors = await runSQLQuery("SELECT * FROM 'Colors';", SERVER_DB_TEST_FILE);
-            // expect(colors).to.have.lengthOf(1);
+            const colors = await runSQLQuery("SELECT * FROM 'Colors';", DB_TEST_FILE);
+            expect(colors).to.have.lengthOf(1);
         });
     });
 });

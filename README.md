@@ -111,7 +111,8 @@ updating/deleting data through Sequelize. But you will learn how
 to do those in future lessons.
 
 For now, a __test/01-name-spec.js__ file has been provided to test that you set
-up the validations properly. Execute this file by running `npm test`.
+up the validations properly. Execute this file by running `npm test` from the
+__server__ directory.
 
 Expected output is included for each test, with the first two scenarios
 expected to fail your validations and the last one expected to pass.
@@ -146,7 +147,8 @@ CREATE TABLE `Colors` (
   `updatedAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP);
 ```
 
-You can test the bonus by running `npm test test/bonus/02-isPrimary-spec.js`.
+You can test the bonus by running `npm test test/bonus/02-isPrimary-spec.js`
+from the __server__ directory.
 
 ## Congratulations!
 
@@ -155,10 +157,8 @@ implement basic database-level constraints and model-level validations.
 
 ## Submission
 
-Submit your work. Make sure to delete the `node_modules` folders in
-__BOTH root and server directories__!!
+Submit your work.
 
-1. Delete the `node_modules` folder in the root directory
-2. Delete the `node_modules` folder in the __server__ directory
-3. Zip up the project folder
-4. Submit the zip file
+1. Delete the `node_modules` folder in the __server__ directory
+2. Zip up the project folder
+3. Submit the zip file
